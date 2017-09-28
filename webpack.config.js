@@ -48,8 +48,7 @@ const commonConfig = {
 		extensions: ['.js', '.ts', '.tsx', '.jsx', '.json']
 	},
 	externals: {
-		"react": "React",
-		"react-dom": "ReactDOM"
+
 	}
 }
 
@@ -63,7 +62,7 @@ module.exports = [
   Object.assign(
     {
       target: 'electron-renderer',
-      entry: { renderer: './src/renderer.ts' },
+      entry: { renderer: './src/renderer.tsx' },
       plugins: [new HtmlWebpackPlugin()]
     },
     commonConfig)
