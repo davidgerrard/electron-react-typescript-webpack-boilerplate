@@ -5,6 +5,7 @@ const commonConfig = {
 		path: path.resolve(__dirname, 'dist'),
 		filename: '[name].js'
 	},
+	devtool: "source-map",
 	module: {
 		rules: [{
 				test: /\.ts$/,
@@ -16,13 +17,22 @@ const commonConfig = {
 				}
 			},
 			{
-				test: /\.tsx?$/,
-				loader: 'ts-loader'
+				test: /\.ts?$/,
+				loader: "awesome-typescript-loader"
+			},
+			{
+				enforce: "pre",
+				test: /\.js$/,
+				loader: "source-map-loader"
 			}
 		]
 	},
 	resolve: {
 		extensions: ['.js', '.ts', '.tsx', '.jsx', '.json']
+	},
+	externals: {
+		"react": "React",
+		"react-dom": "ReactDOM"
 	}
 }
 
