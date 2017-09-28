@@ -13,6 +13,13 @@ function onReady() {
   mainWindow.on('close', () => app.quit());
 }
 
+function onQuit() {
+  if (process.platform !== 'darwin') {
+    app.quit();
+  }
+}
+
 app.on('ready', () => onReady());
-app.on('window-all-closed', () => app.quit());
+app.on('window-all-closed', () => onQuit());
+
 console.log(`Electron Version ${app.getVersion()}`);
