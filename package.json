@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack --config webpack.config.js",
-    "prestart": "npm run build",
+    "clean":"npm run clean:dist",
+    "clean:dist":"rimraf ./dist",
+    "prestart": "npm run clean & npm run build",
     "start": "electron ./dist/main.js"
   },
   "private": true,
@@ -28,6 +30,7 @@
     "babel-preset-react": "^6.24.1",
     "electron": "^1.7.8",
     "html-webpack-plugin": "^2.30.1",
+    "rimraf": "^2.6.2",
     "source-map-loader": "^0.2.1",
     "standard-loader": "^6.0.1",
     "ts-loader": "^2.3.7",
