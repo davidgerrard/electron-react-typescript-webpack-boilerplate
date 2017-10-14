@@ -1,7 +1,7 @@
 {
   "name": "electron-react-ts",
   "version": "1.0.0",
-  "description": "",
+  "description": "A basic boilerplate for creating Electron applications, using React, Webpack and TypeScript.",
   "main": "./dist/main.js",
   "scripts": {
     "build": "webpack --config webpack.config.js",
@@ -12,13 +12,13 @@
     "pretest": "webpack --config webpack.tests.config.js",
     "test": "jest --u"
   },
-  "private": true,
+  "private": false,
   "repository": {
-    "url": "https://dgerrard.visualstudio.com/_git/electron-react-ts"
+    "url": "https://github.com/davidgerrard/electron-react-typescript-webpack-boilerplate.git"
   },
-  "keywords": [],
+  "keywords": ["electron", "react", "typescript", "webpack", "jest"],
   "author": "Dave Gerrard",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@types/electron": "^1.6.10",
     "@types/jest": "^21.1.2",
