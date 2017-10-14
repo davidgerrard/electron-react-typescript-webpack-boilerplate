@@ -2,7 +2,7 @@
   "name": "electron-react-ts",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./dist/main.js",
   "scripts": {
     "build": "webpack --config webpack.config.js",
     "clean": "npm run clean:dist",
