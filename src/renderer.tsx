@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Greeting from './components/greeting.component';
 
 ReactDOM.render(
-  <div>Node version: {process.versions.node}</div>,
-  document.getElementsByTagName('body')[0]);
+  <Greeting />,
+  document.getElementById('root') as HTMLElement
+);

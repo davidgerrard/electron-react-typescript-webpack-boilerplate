@@ -63,7 +63,11 @@ module.exports = [
     {
       target: 'electron-renderer',
       entry: { renderer: './src/renderer.tsx' },
-      plugins: [new HtmlWebpackPlugin()]
+      plugins: [new HtmlWebpackPlugin({
+        template: './src/index.html',
+        inject: 'body',
+        hash: true
+      })]
     },
     commonConfig)
 ]
