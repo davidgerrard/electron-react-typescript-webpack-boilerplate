@@ -6,7 +6,7 @@ So I wanted to learn how to write Electron apps and use React for presentation. 
 
 ## Getting Started
 
-I am using versions 8.x of NodeJS and 5.x of NPM in my development environment. 
+I am using versions 8.x of NodeJS and 5.x of NPM in my development environment. You will get an error in `renderer.tsx` if you don't, where the `Greeting` component is used. You can use a tool called ['node version manager'](https://github.com/creationix/nvm) if you want to keep older versions of node/npm installed, but have a play with this.
 
 1. Clone this repo
 2. npm install
